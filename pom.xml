@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.6</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.miracle</groupId>
+    <artifactId>miracle-chat-java</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>miracle-chat-java</name>
+    <packaging>pom</packaging>
+
+   <!--依赖版本统一管理-->
+    <properties>
+        <java.version>8</java.version>
+
+        <aop.version>5.3.24</aop.version>
+        <aspectj.version>1.9.7</aspectj.version>
+    </properties>
+
+    <!--子服务统一管理-->
+    <modules>
+    <module>privapp</module>
+    <module>domain</module>
+    <module>biz</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.unfbx</groupId>
+            <artifactId>chatgpt-java</artifactId>
+            <version>1.0.15</version>
+        </dependency>
+
+
+        <!--mybatis的的依赖-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--<dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>druid</artifactId>
+          <version>1.2.3</version>
+      </dependency>-->
+
+
+         <!--使用AOP-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+
+
+        <!--chat请求现阶段所用依赖，勿动!!!-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-translate</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
+        <!--仅在开发阶段使用，支持springboot项目热部署，生产环境我们常规部署时记得删掉-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <!--为了方便定义实体类这里暂时用lombok，切记如果手动写了getset方法不要在方法内加逻辑，容易引发异常-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+   <!--扫描所有src下面的包避免遗漏-->
+    <build>
+        <resources>
+            <!-- 扫描src/main/java下所有xx.xml文件 -->
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <!-- 扫描resources下所有资源 -->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+
+</project>

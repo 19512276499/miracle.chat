@@ -1,0 +1,10 @@
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/config/MybatisConfiguration.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/config/DruidConfiguration.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/vo/LoginVO.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/config/LocalCache.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/config/ChatConfiguration.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/chat/ChatRequest.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/vo/ChatVO.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/domain/OpenAiResponse.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/chat/ChatResponse.java
+/Users/lishen/IdeaProjects/miracle/miracle-chat-java/domain/src/main/java/com/miracle/domain/User.java
